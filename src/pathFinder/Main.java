@@ -62,7 +62,7 @@ public class Main {
 
     }
 
-    //public static void findPath(int maze[][], List<Node> path){
+
     public static void findPath(int maze[][]){
         int[][]copiedMaze = copy(maze);
         List<Node> path = new ArrayList<>();
@@ -87,7 +87,7 @@ public class Main {
     }
 
 
-    //-----------------------Searching algorithm--------------------------
+    //---------------------------Searching algorithm------------------------------
 
     public static boolean searchPath(int maze[][], int x, int y, List<Node> path){
 
