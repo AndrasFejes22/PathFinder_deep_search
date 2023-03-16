@@ -91,8 +91,6 @@ public class Main {
 
     public static boolean searchPath(int maze[][], int x, int y, List<Node> path){
 
-        int a = maze.length;
-
         if(maze[y][x] == 9){
             Node node = new Node(x, y);
             path.add(node);
