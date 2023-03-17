@@ -35,7 +35,7 @@ public class Main {
         System.out.println("--------SOLUTION---------");
         for(int i = 0; i < path.size(); i++){
 
-            maze[path.get(i).getY()][path.get(i).getX()] = 2;
+            maze[path.get(i).y][path.get(i).x] = 2;
         }
 
         for (int i = 0; i < maze.length; i++) {
@@ -54,7 +54,7 @@ public class Main {
         Collections.reverse(path);
         // list of solve coordinates
         for(int i = 0; i < path.size(); i++){
-            System.out.print("("+path.get(i).getX() + " " + path.get(i).getY()+ ")" + " ") ;
+            System.out.print("("+path.get(i).x + " " + path.get(i).y+ ")" + " ") ;
 
         }
         System.out.println();
@@ -131,6 +131,9 @@ public class Main {
 
     // Node class
 
+    private static record Node (int x, int y) {}
+
+    /*
     private static class Node{
         private int x;
         private int y;
@@ -148,4 +151,5 @@ public class Main {
             return y;
         }
     }
+    */
 }
