@@ -27,7 +27,7 @@ public class Main {
 
         System.out.println();
 
-        findPath(maze);
+        findPath(maze, new Node(1,8));
 
     }
 
@@ -63,10 +63,12 @@ public class Main {
     }
 
 
-    public static void findPath(int maze[][]){
+    public static void findPath(int maze[][], Node startNode){
+        int x = startNode.x;
+        int y = startNode.y;
         int[][]copiedMaze = copy(maze);
         List<Node> path = new ArrayList<>();
-        if(searchPath(maze,1, 1, path)){ // start coordinate: (1,1)
+        if(searchPath(maze,x, y, path)){ // start coordinate: (1,1)
             System.out.println("There is a solution:\n");
             drawMaze(copiedMaze,path);
         } else {
@@ -90,6 +92,8 @@ public class Main {
     //---------------------------Searching algorithm------------------------------
 
     public static boolean searchPath(int maze[][], int x, int y, List<Node> path){
+
+
 
         if(maze[y][x] == 9){
             Node node = new Node(x, y);
