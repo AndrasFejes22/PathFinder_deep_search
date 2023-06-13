@@ -1,3 +1,3 @@
 # PathFinder_deep_search
 
-PathFinder deep search algorythm in Java.
+PathFinder deep search algorithm in Java.
